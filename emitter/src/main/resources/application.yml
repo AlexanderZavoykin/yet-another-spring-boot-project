@@ -1,0 +1,12 @@
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: "localhost:9093"
+      key-serializer: org.springframework.kafka.support.serializer.StringOrBytesSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+kafka:
+  topic: "MESSAGE"
+emission:
+  initialDelayMs: 2000
+  fixedDelayMs: 1000
+  duplicateProbability: 0.5

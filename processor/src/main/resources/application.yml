@@ -1,0 +1,14 @@
+spring:
+  kafka:
+    bootstrap-servers: "localhost:9093"
+    streams:
+      application-id: "message-processor"
+    consumer:
+      key-deserializer: org.springframework.kafka.support.serializer.StringOrBytesSerializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonSerializer
+kafka:
+  topic:
+    input: "MESSAGE"
+    output: "DEDUPLICATED"
+  window:
+    sizeMs: 10000

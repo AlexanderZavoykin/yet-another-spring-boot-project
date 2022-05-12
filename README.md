@@ -19,4 +19,4 @@ docker-compose up -d
 
 Then start both applications.
 
-Then you can make sure that messages are deduplicated by `id` by watching Kafka's saved messaged on Kafka UI (`localhost:9001`).
+Then you can compare messages in source and target topics on Kafka UI (`localhost:9001`) and make sure that they are deduplicated by `id` param.
